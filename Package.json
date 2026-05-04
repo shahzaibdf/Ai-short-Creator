@@ -1,0 +1,22 @@
+{
+  "name": "ai-shorts-generator",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"node backend/server.js\" \"cd frontend && vite\"",
+    "start": "node backend/server.js",
+    "build": "cd frontend && vite build && cp -r dist/* ../public"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "ytdl-core": "^4.11.5",
+    "fluent-ffmpeg": "^2.1.2",
+    "fs-extra": "^11.1.1",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "vite": "^5.0.0"
+  }
+}
